@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .first-color { 
 	background: #152a38; 
 }
@@ -14,6 +19,46 @@
 	background: #e4e5db;
 }
 /*Header*/
+
+
+/*popup login*/
+
+
+.popup {
+    display: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 58px;
+    cursor: pointer;
+}
+
+
+
+
 #header {
     display: flex;
     align-items: center;
@@ -27,7 +72,7 @@
 }
 #header h1{
     color: #e4e5db;
-    font-size: 40px;
+    font-size: 20px;
 }
 #header button{
     animation: part1 1s ease forwards;
@@ -59,7 +104,7 @@
 }
 #navbar li a{
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     color: #d6cfb9;
     transition: 0.3s ease ;
