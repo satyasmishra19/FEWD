@@ -12,16 +12,33 @@
 </head>
 <body>
     <section id="header" class="second-color">
-        <a href="#"><img src="images/logo.png" class="logo" alt="" style="height: 100px; width: 100px;"></a>
+        <a href="#"><img src="images/logo.png" class="logo" alt="" style="height: 45px; width: 45px;"></a>
         <h1>Food Fridge Community</h1>
         <div>
             <ul id="navbar" >
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a class="active"  href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="donate.html">Donate</a></li>
+                <li><a  href="donate.html">Donate</a></li>
                 <li><a href="food.html">Find Food</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
-                <button>Login/Signup</button>
+                <li><a href="community.html">Community</a></li>
+                <button id="openPopupBtn" class="btn btn-primary">Login/Signup</button>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span id="closePopupBtn" class="close">&times;</span>
+                        <h2>Login</h2>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">Login</button>
+                        </form>
+                    </div>
+                </div>
             </ul>
         </div>
     </section>
@@ -31,7 +48,7 @@
                 <h4>Join the Fight Against Hunger and Food Waste</h4>
                <h2>Help to Reduce Hunger and Waste</h2>
                <p>Find Your Nearest Food Fridge</p>
-               <button class="bt">Donate Now</button>
+               <button class="bt"><a href="donate.html">Donate Now</a></button>
            </div>
            <div class="slide carousel-slide">
                <h4>Donate Your Excess Food and Make a Difference Today</h4>
@@ -50,23 +67,23 @@
     <section id="intro">
         <div class="into-container">
             <div class="into-box-1">
-                <h1>We Care!</h1>
-                <p>Welcome to the Community Food Sharing Platform, where we believe in the power of community to drive positive change. Our mission is to connect individuals with excess food to those in need, fostering a culture of sharing, sustainability, and support within our neighborhoods.</p>
+                <h1 style="font-size: 28px;">We Care!</h1>
+                <p style="font-size: 23px;">Welcome to the Community Food Sharing Platform, where we believe in the power of community to drive positive change. Our mission is to connect individuals with excess food to those in need, fostering a culture of sharing, sustainability, and support within our neighborhoods.</p>
             </div>
             <div><img src="images/im-12.png" alt="" class="intro-box-2"></div>
         </div>
         <div class="into-container">
             <div><img src="images/im-5.webp" alt="" style="border-radius: 50px;" class="into-box-1"></div>
             <div class="into-box-2">
-                <h1>Our Mission!</h1>
-                <p>At the Community Food Sharing Platform, our mission is simple yet impactful: to reduce food waste and combat hunger by providing a centralized space where people can easily donate and access food. We strive to create a system where surplus food is redirected to those who need it most, ensuring that no one goes hungry and valuable resources are not wasted.</p>
+                <h1 style="font-size: 28px;">Our Mission!</h1>
+                <p style="font-size: 23px;">At the Community Food Sharing Platform, our mission is simple yet impactful: to reduce food waste and combat hunger by providing a centralized space where people can easily donate and access food. We strive to create a system where surplus food is redirected to those who need it most, ensuring that no one goes hungry and valuable resources are not wasted.</p>
             </div>
         </div>
 
     </section>
     <section id="goals">
-        <h3>Towards Achieving</h3>
-        <h1>Sustainable Development Goals</h1>
+        <h3 >Towards Achieving</h3>
+        <h1 style="padding-top: 40px;" >Sustainable Development Goals</h1>
         <div class="sdg">
             <img src="images/s-2.png" alt="sdg-2" class="flip">
             <img src="images/s-11.png" alt="sdg-11" class="flip">
@@ -77,7 +94,7 @@
     </section><br><br>
     <section id="contact">
         <h3 class="el" style="font-size: xx-large;">Feel Free To</h3>
-        <h1 class="el" style="font-size: xxx-large;">Contact Us</h1>
+        <h1 class="el" style="font-size: xxx-large; padding-top: 40px;">Contact Us</h1>
         <div class="form">
             <form>
                 <div class="form-group">
@@ -105,7 +122,7 @@
             </form>
         </div>
     </section>
-        <footer class="section-p1">
+        <footer class="section-p1" style="padding-top: 20px;">
             <div class="col">
                 <img class="logo" src="images/logo.png" style="height: 80px;width: 80px;">
                 <h4>Contact</h4>
@@ -127,7 +144,7 @@
                 <h4>Categories</h4>
                 <a href="#">Donate Food</a>
                 <a href="#">Find Food</a>
-                <a href="#">Become a Volunteer</a>
+                <a href="#">Community</a>
                 <a href="#">Blogs</a>
                 <a href="#">Support Us</a>
             </div>
@@ -152,3 +169,27 @@
             </div>
         </footer>
 </body>
+
+<script>
+    document.getElementById('openPopupBtn').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'flex';
+});
+
+document.getElementById('closePopupBtn').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('popup')) {
+        document.getElementById('popup').style.display = 'none';
+    }
+});
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Add login logic here
+    alert('Logged in!');
+    document.getElementById('popup').style.display = 'none';
+});
+
+</script>

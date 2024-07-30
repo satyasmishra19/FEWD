@@ -27,7 +27,7 @@
 }
 #header h1{
     color: #e4e5db;
-    font-size: 40px;
+    font-size: 20px;
 }
 #header button{
     animation: part1 1s ease forwards;
@@ -59,7 +59,7 @@
 }
 #navbar li a{
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     color: #d6cfb9;
     transition: 0.3s ease ;

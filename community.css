@@ -129,7 +129,22 @@ body {
     font-size: 0.9em;
     color: #666;
 }
-
+/* footer*/
+.el{
+    text-align: center;
+    line-height: 5px;
+ }
+ .form{
+     background-image: url(im-14.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     font-size: x-large;
+     margin: 20px;
+ }
+ .form-group {
+     margin-bottom: 15px;
+ }
+ 
  /*footer*/
  footer{
      background-color: #152a38;
@@ -152,7 +167,7 @@ body {
  }
  footer h4{
      font-size: 20px;
-     padding-bottom: 10px;
+     padding-bottom: 10pxpx;
      color: #e4e5db;
  }
  footer p{
